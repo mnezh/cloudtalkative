@@ -1,0 +1,22 @@
+// tsconfig.json
+
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.mts",
+    "**/*.js",
+    "**/*.cjs" // Ensure config files are included
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
