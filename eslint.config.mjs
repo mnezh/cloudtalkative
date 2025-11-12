@@ -16,8 +16,8 @@ export default [
       ecmaVersion: 2022,
       sourceType: 'module',
       globals: {
-    ...globals.node,
-  },
+        ...globals.node,
+      },
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
@@ -40,5 +40,20 @@ export default [
       ],
     },
     ignores: ['dist', 'node_modules'],
+  },
+
+  {
+    files: ['src/public/*.js'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        fetch: 'readonly',
+      },
+      sourceType: 'script',
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      'no-undef': 'error',
+    },
   },
 ];

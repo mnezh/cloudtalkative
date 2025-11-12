@@ -13,10 +13,10 @@ You can use any programming language, tooling, and frameworks you typically rely
 
 The expected deliverable is a **Git repository** we can clone from GitHub (or similar), with:
 
-* API-level automated tests
-* UI E2E automation (see below)
-* Basic performance/load test
-* Documentation on how to run everything from the command line
+- API-level automated tests
+- UI E2E automation (see below)
+- Basic performance/load test
+- Documentation on how to run everything from the command line
 
 ## Scope
 
@@ -24,9 +24,9 @@ Your goal is to demonstrate the following:
 
 ### API Testing
 
-* **Clean, maintainable test automation** for HTTP APIs
-* **Thoughtful test design** (positive, negative, edge cases)
-* Reusability and good structure
+- **Clean, maintainable test automation** for HTTP APIs
+- **Thoughtful test design** (positive, negative, edge cases)
+- Reusability and good structure
 
 ### UI E2E Testing
 
@@ -39,17 +39,17 @@ We recommend **Playwright or Cypress**, but feel free to use anything you're com
 
 ### Performance Testing
 
-* Provide a **minimal performance test** using a tool like **k6, Gatling**, or similar
-* Simulate concurrent requests and explain what metrics you'd track (latency, throughput, error rate, etc.)
+- Provide a **minimal performance test** using a tool like **k6, Gatling**, or similar
+- Simulate concurrent requests and explain what metrics you'd track (latency, throughput, error rate, etc.)
 
 ## Bonus: Strategy & Improvements
 
 Include a short doc describing your approach to:
 
-* Scaling test automation across services
-* Avoiding flakiness and ensuring test reliability
-* Balancing unit/integration/E2E tests
-* Ensuring smart test coverage in a growing org
+- Scaling test automation across services
+- Avoiding flakiness and ensuring test reliability
+- Balancing unit/integration/E2E tests
+- Ensuring smart test coverage in a growing org
 
 Suggest how this API could be improved from a testing or reliability point of view.
 
@@ -57,9 +57,9 @@ Suggest how this API could be improved from a testing or reliability point of vi
 
 ## Summary of What to Deliver
 
-* Git repo with your API, E2E, and performance test code
-* Instructions on how to run everything
-* A test strategy or architecture write-up
-* (Optional) Suggestions on improving the API or testing setup
+- Git repo with your API, E2E, and performance test code
+- Instructions on how to run everything
+- A test strategy or architecture write-up
+- (Optional) Suggestions on improving the API or testing setup
 
 Good luck, and thanks for taking the time!

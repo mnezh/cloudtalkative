@@ -1,11 +1,11 @@
 // tests/api/timestamp.spec.ts
 
-import { expect } from "@playwright/test";
+import { expect } from '@playwright/test';
 
-import { test, dateSeconds, dateYmdHis } from "./fixtures";
-import { valid24HDate, invalidInput, shouldFail } from "./api.data";
+import { test, dateSeconds, dateYmdHis } from './fixtures.js';
+import { valid24HDate, invalidInput, shouldFail } from '../data/inputs.js';
 
-test.describe("Unix Timestamp Converter API", () => {
+test.describe('Converter API', () => {
   valid24HDate.forEach(([inputDate, scenarioName]) => {
     test(`date string "${inputDate}" to timestamp (${scenarioName})`, async ({
       toTimeStamp,
@@ -29,12 +29,12 @@ test.describe("Unix Timestamp Converter API", () => {
   });
 
   invalidInput.forEach(([inputDate, scenarioName]) => {
-    test(`invalid input ${inputDate} (${scenarioName})`, async ({
+    test(`invalid input: ${scenarioName} ${inputDate}`, async ({
       converter,
     }) => {
       const response = await converter(inputDate);
       expect(response, `Response body for ${scenarioName} ${response}`).toBe(
-        "false",
+        'false',
       );
     });
   });
@@ -45,7 +45,7 @@ test.describe("Unix Timestamp Converter API", () => {
       async ({ converter }) => {
         const response = await converter(inputDate);
         expect(response, `Response body for ${scenarioName} ${response}`).toBe(
-          "false",
+          'false',
         );
       },
     );

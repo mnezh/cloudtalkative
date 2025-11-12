@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Timestamp Converter</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 2rem auto;
+      }
+      section {
+        margin-bottom: 2rem;
+      }
+      label {
+        display: block;
+        margin: 0.5rem 0;
+      }
+      input,
+      button {
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+      .result {
+        margin-top: 0.5rem;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Timestamp Converter</h1>
+
+    <section>
+      <h2>Unix ↔ Date Conversion</h2>
+      <label>Input</label>
+      <input
+        id="inputValue"
+        type="text"
+        placeholder="e.g. 1451613802 or 2016-01-01 02:03:22"
+      />
+      <button id="convertBtn">Convert</button>
+      <div class="result" id="resultLabel"></div>
+    </section>
+
+    <script src="main.js"></script>
+  </body>
+</html>
