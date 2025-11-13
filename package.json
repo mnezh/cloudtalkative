@@ -9,6 +9,9 @@
     "test": "playwright test",
     "test:api": "playwright test --project=api",
     "test:e2e": "playwright test --project=e2e",
+    "test:load": "mkdir -p ${REPORT_DIR:-reports}/load; k6 run tests/load/timestamp-load.test.js",
+    "report:pw": "npx playwright show-report ${REPORT_DIR:-reports}/functional/html",
+    "report:load": "open ${REPORT_DIR:-reports}/load/load-test-report.html",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write ."

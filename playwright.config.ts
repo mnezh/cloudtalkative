@@ -9,12 +9,16 @@ import 'process';
 const API_BASE_URL = process.env.API_BASE_URL || 'https://helloacm.com';
 const E2E_BASE_URL = process.env.E2E_BASE_URL || 'http://localhost:3000';
 
+const REPORT_DIR = process.env.REPORT_DIR || 'reports';
+const OUTPUT_DIR = `${REPORT_DIR}/functional`;
+
 export default defineConfig({
   fullyParallel: true,
+  outputDir: OUTPUT_DIR,
   reporter: [
     ['list'],
-    ['html', { open: 'never' }],
-    ['junit', { outputFile: 'playwright-report/test-results.xml' }],
+    ['html', { open: 'never', outputFolder: `${OUTPUT_DIR}/html` }],
+    ['junit', { outputFile: `${OUTPUT_DIR}/test-results.xml` }],
   ],
   projects: [
     {

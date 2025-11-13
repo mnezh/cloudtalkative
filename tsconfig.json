@@ -4,7 +4,6 @@
     // Using NodeNext for modern module resolution (recommended with ESLint flat config/ESM)
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

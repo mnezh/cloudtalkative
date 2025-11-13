@@ -144,3 +144,7 @@ vite.config.ts.timestamp-*
 # Test results
 test-results/
 playwright-report/
+reports/
+
+# OS X
+.DS_Store

@@ -1,13 +1,15 @@
 # QA Automation Assignment
 
-This project contains automated API, E2E, and performance tests built with Playwright and TypeScript.  
+This project contains implementation of the [assignment](ASSIGNMENT.md):
+automated API, E2E, and performance tests built with Playwright and TypeScript.  
+
 It is configured to use ESLint and Prettier for code quality and automatic formatting.
 
 ## Requirements
 
 - Node.js version 24 or higher
 - npm (included with Node.js)
-- Internet connection to install dependencies
+- k6 Load Testing Tool (See [Installation Instructions](https://grafana.com/docs/k6/latest/set-up/install-k6/))
 
 ## Project setup
 
@@ -28,19 +30,25 @@ The application proxy server can be started using `ts-node`. This server routes 
 
 - Start the development server: `npm run web`
 
-## Running tests
+## Running tests and reports
 
-Playwright tests can be executed using the npm scripts defined in `package.json`.
+Functional, API, E2E, and Load tests can be executed using the npm scripts defined in `package.json`. The optional environment variable `REPORT_DIR` can be used to customize the output folder (defaults to `reports`).
 
-- Run all tests (API and E2E): `npm test`
+- Run all Playwright tests (API and E2E): `npm test`
 - Run only API tests: `npm run test:api`
 - Run only E2E (End-to-End) tests: `npm run test:e2e`
+- Run load (performance) tests with k6: `npm run test:load`
+
+### Viewing Reports
+
+- View Playwright HTML Report: `npm run report:pw`
+- View k6 Load Test HTML Report: `npm run report:load`
 
 Playwright configuration and test files are located in the `tests` folder.
 
 ## Code quality and formatting
 
-The project uses ESLint (with the new flat config) and Prettier to enforce consistent code style.
+The project uses ESLint and Prettier to enforce consistent code style.
 
 - Check for lint errors: `npm run lint`
 - Automatically fix lint issues: `npm run lint:fix`
