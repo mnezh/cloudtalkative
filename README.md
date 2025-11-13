@@ -1,7 +1,7 @@
 # QA Automation Assignment
 
 This project contains implementation of the [assignment](ASSIGNMENT.md):
-automated API, E2E, and performance tests built with Playwright and TypeScript.  
+automated API, E2E, and performance tests built with Playwright and TypeScript.
 
 It is configured to use ESLint and Prettier for code quality and automatic formatting.
 
