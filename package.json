@@ -1,5 +1,5 @@
 {
-  "name": "qa-automation-assignment",
+  "name": "cloudtalkative",
   "version": "1.0.0",
   "description": "Playwright API and E2E, and k6 Performance test suite.",
   "main": "src/server.ts",
